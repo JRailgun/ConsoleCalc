@@ -22,7 +22,9 @@ switch (Console.ReadLine())
     case "*":                    
         Console.WriteLine($"Результат: {a} * {b} = " + (a * b));                    
         break;                
-    case "/":                    
-        Console.WriteLine($"Результат: {a} / {b} = " + (a / b));                  
+    case "/":
+        if (b == 0)
+            Console.WriteLine("Нельзя делить на ноль");
+        else Console.WriteLine($"Результат: {a} / {b} = " + (a / b));
         break;            
 }
