@@ -1,6 +1,5 @@
 ﻿double a = 0; double b = 0;
 
-Console.WriteLine("Калькулятор C#\n");
 Console.WriteLine("Введите 1-ое число");
 a = Convert.ToDouble(Console.ReadLine());
 Console.WriteLine("Введите 2-ое число");
