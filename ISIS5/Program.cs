@@ -1,6 +1,5 @@
 ﻿double a = 0; double b = 0;
 
-Console.WriteLine("Добро пожаловать в калькулятор\n");
 Console.WriteLine("Введите 1-ое число");
 a = Convert.ToDouble(Console.ReadLine());
 Console.WriteLine("Введите 2-ое число");
@@ -28,4 +27,13 @@ switch (Console.ReadLine())
             Console.WriteLine("Нельзя делить на ноль");
         else Console.WriteLine($"Результат: {a} / {b} = " + (a / b));
         break;            
+}
+Console.Write("Завершить работу программы (Y/N?)\n");
+if (Console.ReadLine() == "Y")
+{
+    System.Environment.Exit(0);
+}
+else if (Console.ReadLine() == "N")
+{
+    Console.ReadKey();
 }
