@@ -1,9 +1,27 @@
-﻿double a = 0; double b = 0;
+﻿#pragma warning disable CS8600 // Преобразование литерала, допускающего значение NULL или возможного значения NULL в тип, не допускающий значение NULL.
 
-Console.WriteLine("Введите 1-ое число");
-a = Convert.ToDouble(Console.ReadLine());
-Console.WriteLine("Введите 2-ое число");
-b = Convert.ToDouble(Console.ReadLine());
+double a = 0; double b = 0;
+
+while (true)
+{
+    Console.WriteLine("Введите 1-ое число");
+    string text = Console.ReadLine();
+    if (double.TryParse(text, out a))
+    {
+        break;
+    }
+    Console.WriteLine("Введенное значение не является числом");
+}
+while (true)
+{
+    Console.WriteLine("Введите 2-ое число");
+    string text = Console.ReadLine();
+    if (double.TryParse(text, out b))
+    {
+        break;
+    }
+    Console.WriteLine("Введенное значение не является числом");
+}
 Console.WriteLine("Выберите действие:");
 Console.WriteLine("\t+ - Сложение");           
 Console.WriteLine("\t- - Вычитание");           
